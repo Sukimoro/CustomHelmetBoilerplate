@@ -7,9 +7,6 @@ public class PlayerSpawnPatch
 {
     public static void Postfix(Actor __instance)
     {
-        var isPlayer = __instance.isPlayer;
-        if (isPlayer)
-        {
             var gameObject = Object.Instantiate(Main.helmet);
             var componentInChildren = gameObject.GetComponentInChildren<Animator>(true);
             var componentInChildren2 = __instance.GetComponentInChildren<HelmetController>(true);
